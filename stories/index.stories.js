@@ -5,6 +5,7 @@ import { action } from "@storybook/addon-actions";
 import { linkTo } from "@storybook/addon-links";
 
 import Editor from "./components/canner-slate-editor";
+import EditorWithPreview from "./components/canner-slate-with-preview-editor";
 import MdEditor from "./components/markdown-editor";
 import MdEditorWithSerializer from "./components/markdown-editor/with-serializer";
 import QuillIcons from "./components/quill-icons";
@@ -19,6 +20,11 @@ storiesOf("canner-slate-editor", module)
       <HelpMenu />
     </div>
   ));
+
+storiesOf("canner-slate-with-preview-editor", module).add(
+  "Simple demo with preview",
+  () => <EditorWithPreview />
+);
 
 storiesOf("slate-md-editor", module)
   .add("Simple demo", () => <MdEditor />)
